@@ -1,0 +1,16 @@
+{
+    "name": "font-awesome-more-less",
+    "version": "0.0.0-kanso.1",
+    "description": "Font Awesome with even more fonts, for use with bootstrap-less",
+    "url": "http://gregoryloucas.com/Font-Awesome-More/",
+    "less": {
+        "paths": ["."]
+    },
+    "attachments": [
+        "font"
+    ],
+    "dependencies": {
+        "attachments": null,
+        "less-precompiler": null
+    }
+}
