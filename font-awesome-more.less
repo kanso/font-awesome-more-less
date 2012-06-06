@@ -22,15 +22,27 @@
 
     */
 
-@fontIconDirectory: '../font';
+/* override sprites in case you haven't removed sprites from less */
+html [class^="icon-"], [class*=" icon-"] {
+  background-image: none;
+  height: initial;
+  width: initial;
+  line-height: initial;
+  vertical-align: initial;
+}
 
+@fontIconEotUrl: %('%s/fontawesome-webfont.eot', @fontIconDirectory);
+@fontIconEotForIEUrl: %('%s/fontawesome-webfont.eot?#iefix', @fontIconDirectory);
+@fontIconWoffUrl: %('%s/fontawesome-webfont.woff', @fontIconDirectory);
+@fontIconTtfUrl: %('%s/fontawesome-webfont.ttf', @fontIconDirectory);
+@fontIconSvgUrl: %('%s/fontawesome-webfont.svg#FontAwesome', @fontIconDirectory);
 @font-face {
   font-family: 'FontAwesome';
-  src: url(@fontIconDirectory + '/fontawesome-webfont.eot');
-  src: url(@fontIconDirectory + '/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
-    url(@fontIconDirectory + '/fontawesome-webfont.woff') format('woff'),
-    url(@fontIconDirectory + '/fontawesome-webfont.ttf') format('truetype'),
-    url(@fontIconDirectory + '/fontawesome-webfont.svg#FontAwesome') format('svg');
+  src: url(@fontIconEotUrl);
+  src: url(@fontIconEotForIEUrl) format('embedded-opentype'),
+    url(@fontIconWoffUrl) format('woff'),
+    url(@fontIconTtfUrl) format('truetype'),
+    url(@fontIconSvgUrl) format('svg');
   font-weight: normal;
   font-style: normal;
 }
